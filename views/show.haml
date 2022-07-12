@@ -1,0 +1,19 @@
+%h1= @movie.title
+%table{class:"table"}
+  %tr
+    %td Title 
+    %td= @movie.title
+  %tr
+    %td Director 
+    %td= @movie.director
+  %tr
+    %td Published
+    %td= @movie.year
+  %tr
+    %td Description:
+    %td= @movie.text_area
+%p
+%a{class:"btn btn-primary", href:"/movies/new"} Добавить новый фильм
+%p
+%a{class:"btn btn-primary", href:"/movies"} Back to Index
+

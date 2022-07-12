@@ -1,0 +1,11 @@
+%h1 My Movies
+.list-group
+  - @movies.each do |movie|
+    %a{class:"list-group-item list-group-item-action", href: "movies/#{movie.id}"}
+      %div{class:"d-flex w-100 justify-content-between"}
+        %h5{class:"mb-1"}  #{movie.title} 
+        %small #{movie.year}
+      %p{class:"mb-1"} Режисер: #{movie.director} 
+      %small #{movie.text_area}
+%p
+%a{ class: "btn btn-primary", href: "/movies/new"} Добавить фильм

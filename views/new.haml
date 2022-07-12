@@ -1,0 +1,17 @@
+%h1 Add New Movie
+%form{class:"row g-3", method:"post", action:"/movies/create"}
+  %label{for:"title"} Title:
+  %input{type:"text", name:"title"}
+
+  %label{for:"director"} Director:
+  %input{type:"text", name:"director"}
+  
+  %label{for:"year"} Year:
+  %input{type:"text", name:"year"}
+
+  %label{for:"text_area"} Описание фильма:
+  %textarea{type:"text", name:"text_area"}
+
+  %button{class:"btn btn-primary", type:"submit"} Добавить
+%p
+%a{class:"btn btn-primary", href:"/movies"} Back to Index
